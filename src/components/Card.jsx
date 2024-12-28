@@ -6,12 +6,14 @@ import ButtonContainer from "./ButtonContainer";
 
 export default function Card() {
   const [count, setCount] = useState(() => {
-    console.log("Initial count state");
     return 0;
   });
-  console.log("Card rendered");
+
+  // Add limit state check
+  const isLimit = count >= 100;
+  
   return (
-    <div className="card">
+    <div className={`card ${isLimit ? 'card--limit' : ''}`}>
       <Title />
       <Count count={count} />
       <Reset setCount={setCount} />
