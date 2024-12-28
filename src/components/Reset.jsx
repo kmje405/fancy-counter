@@ -1,9 +1,8 @@
 import { ResetIcon } from "@radix-ui/react-icons";
 
 export default function Reset({ setCount }) {
-  function handleCountReset(e) {
+  function handleCountReset() {
     setCount(0);
-    e.currentTarget.blur();
   }
 
   return (

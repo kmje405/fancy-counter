@@ -3,14 +3,12 @@ import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
 export default function CountButton({ type, setCount }) {
   const handleIncrement = (e) => {
     setCount((prevCount) => prevCount + 1);
-    e.currentTarget.blur();
 
   };
   const handleDecrement = () => {
     setCount((prevCount) => {
       // Prevent count from going below 0
       if (prevCount <= 0) return 0;
-      e.currentTarget.blur();
       return prevCount - 1;
     });
   };
